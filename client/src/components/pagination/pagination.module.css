@@ -1,0 +1,60 @@
+
+.none{
+    display: none;
+  }
+  .pag .point{
+    font-size: 20px;
+    cursor:text;
+    
+  
+  }
+  .pag .point:hover{
+    font-size: 20px;
+    cursor:text;
+    background-color: rgb(255, 255, 255);
+  }
+  .pag .ind{
+    border-radius: 50%;
+    background-color: #495867;
+  }
+  .pag .ind:hover{
+    border-radius: 50%;
+    background-color: #495867;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4)
+  
+  } 
+  .next{
+    display: flex;
+    width: 50px;
+    font-size: 23px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color:#2E2B30
+  }
+  .pag{
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .pag button {
+    background-color: #FFD71B;
+    font-size: 0.8em;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color:#ffffff;
+  
+  }
+  
+  .pag button:hover {
+    background-color:#fff;
+    border-radius: 50%;
+    color:#495867 ;
+  
+  }
+  

@@ -1,0 +1,153 @@
+$Primary_color: #FFD71B;
+$Second_color: #2E2B30;
+$Terciary_color: #151515;
+$Cuarto_color: #fff;
+@use './mixins';
+
+.container{
+  @include mixins.main(none,flex,column,100vw, none); 
+ background-color:$Terciary_color;
+}
+
+
+ .portada{
+  @include mixins.main(relative,flex,none,100vw, none);
+  height: 60vh;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../../utils/board.jpg');
+  .hamburger:nth-of-type(1){
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    top: 6rem;
+  }
+
+  .hamburger:nth-of-type(2){
+    position: absolute;
+    width: 300px;
+    left: -70px;
+   bottom: -70px;
+  }
+
+  .img{
+    border: 4px solid $Terciary_color;
+    width: 300px;
+    height: 160px;
+    & img{
+      width: 100%;
+      height: 100%;
+    
+     
+    }
+  }
+ }
+
+
+ .img:nth-of-type(1) {
+  transform: rotate(-30deg);
+} 
+ .img:nth-of-type(2) {
+  transform: rotate(10deg);
+} 
+.img:nth-of-type(3) {
+  transform: rotate(-20deg);
+}
+
+.container_home{
+  z-index: 4;
+ width: 100vw;
+ background-color: $Terciary_color;
+  display: flex;
+  gap: 2px;
+  .menu{
+    background-color: $Second_color;
+    color: $Cuarto_color;
+    width: 250px;
+    padding-left: 20px;
+    z-index: 3;
+  }
+}
+
+.nav_home{
+  background-color: $Primary_color;
+  display: flex;
+  z-index: 4;
+  align-items: center;
+  justify-content:space-between;
+  height: 55px;
+  position: sticky;
+  top: 0;
+  padding-left:10px ;
+ }
+.container_cards{
+ width: 78%;
+ display: flex;
+ flex-direction: column;
+
+ .cards{
+  background-color: $Terciary_color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ }
+}
+
+.menuR{
+  background-color: $Second_color;
+  color: $Second_color;
+  position: absolute;
+  width: 250px;
+  padding-left: 20px;
+  z-index: 3;
+
+}
+
+@media (max-width: 980px) {
+  .menu{
+  left: -100%;
+  transition: left 3s ease;
+  position: absolute;
+  background-color: $Second_color;
+  
+
+
+  }
+  .nav_home {
+   & h1{
+    cursor: pointer;
+
+   }
+  }
+  .menuR{
+    border: none;
+    color: $Cuarto_color;
+    left: 0;
+    transition: left 1s ease;
+    background-color: $Second_color;
+    width: 250px;
+
+  }
+  .container_cards{
+    width: 100%;
+    font-size: 0.2em;
+    height: 40vh;
+    
+  }
+
+}
+  
+
+
+@media (max-width: 351px) {
+ .container{
+  width: 1200px;
+ }
+.container_home{
+  width: 1200px;
+}
+}

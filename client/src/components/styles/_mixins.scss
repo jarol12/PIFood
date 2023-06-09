@@ -1,0 +1,7 @@
+@mixin main($position,$display,$direction,$width,$padding){
+    position: $position;
+    display: $display;
+    flex-direction: $direction;
+    width: $width;
+    padding: $padding;
+   }

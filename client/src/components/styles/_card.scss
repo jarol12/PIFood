@@ -1,0 +1,74 @@
+$Primary_color: #FFD71B;
+$Second_color: #2E2B30;
+$Terciary_color: #202020;
+$Cuarto_color: #fff;
+@use './mixins';
+
+//main($position,$display,$direction,$width){
+.card-container{
+    @include mixins.main(relative,flex,row,335px,0);
+    background-color: $Terciary_color;
+    height: 222px;
+    margin: 1rem;
+    & img{
+        width: 50%;
+        height: 100%;
+    }
+    
+}
+
+.card-title{
+    :hover{
+        color: $Primary_color;
+      }
+}
+
+
+.card-info{
+    @include mixins.main(none,flex,column,100%, 0 10px 0 10px);
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+
+.diets{
+    @include mixins.main(absolute,flex,column,50%, 1px);
+    left: 0;
+    background-color: #fff;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    &::-webkit-scrollbar:vertical {
+        width:6px;
+        background-color: rgb(230, 230, 230);
+    }
+    
+    &::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+        display: none;
+        
+    } 
+    
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #FFD71B;
+        border-radius: 20px;
+    
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;  
+    }
+}
+
+
+ 
+
+.none{
+    opacity: 0;
+
+}

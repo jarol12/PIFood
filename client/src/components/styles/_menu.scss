@@ -1,0 +1,20 @@
+.container_menu{
+ display: flex;
+ width: auto;
+ position: sticky;
+ top: 0;
+ flex-direction: column;
+    & img{
+        width: 40px;
+        height: 40px
+    }
+    &  ul li {
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin:0 0 8px -19px;
+        gap: 8px
+    }
+}

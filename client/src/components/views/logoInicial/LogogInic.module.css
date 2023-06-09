@@ -1,0 +1,64 @@
+
+.container{
+  width: 100vw;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+}
+.container img{
+  width: 200px;
+  position: absolute;
+  opacity:  1;
+  animation: spin 5s linear 1 ;
+}
+
+.icon{
+  opacity: 1;
+  transition: all 3s ease;
+}
+.load{
+  font-size: 8em;
+  color: #FFD71B;
+  height: 20px;
+}
+.load p:nth-last-of-type(1){
+  opacity: 1;
+  animation: circle 1s linear .3s infinite ;
+  
+}
+.load p:nth-last-of-type(2){
+  opacity: 1;
+  animation: circle 1s linear .2s infinite ;
+}
+
+.load p:nth-last-of-type(3){
+  opacity: 1;
+  animation: circle 1s linear .1s infinite ;
+}
+
+.none{
+  opacity: 0;
+  transition: all 3s ease;
+}
+@keyframes circle{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0%{
+     opacity: 0;
+
+  }
+  
+  100%{
+     opacity: 1;
+  }
+}
+
